@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.0">
+	<name>Exported trace from Traccar</name>
+	<trk>
+        <name>trace</name>
+        <number>1</number>
+        <trkseg>
+            {% for pt in pts -%}
+            <trkpt lat="{{ pt.latitude }}" lon="{{ pt.longitude }}"><ele>{{ pt.altitude }}</ele><time>{{ pt.fixTime }}</time></trkpt>
+            {% endfor -%}
+    	</trkseg>
+    </trk>
+</gpx>
